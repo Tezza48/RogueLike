@@ -22,6 +22,8 @@ namespace DrunkenWalk
 
         private bool shouldWalk = true;
 
+        public enum MoveDirection { UP = 0, RIGHT, DOWN, LEFT };
+
         public DungeonGeneration(int height, int width, int gridToEmpty)
         {
             mapGrid = new int[width, height];
@@ -29,7 +31,7 @@ namespace DrunkenWalk
             gridHeight = height;
             gridWidth = width;
 
-            Timer timer = new Timer(Walk, this, 0, 500);
+            // Timer timer = new Timer(Walk, this, 0, 500);
             
             rand = new Random();
             // pick a random starting position
@@ -38,7 +40,7 @@ namespace DrunkenWalk
             currentY = rand.Next(height);
             mapGrid[currentX, currentY] = 1;
 
-            //Walk(null);
+            Walk(null);
         }
 
         public void DrawDungeon()
@@ -58,9 +60,45 @@ namespace DrunkenWalk
             }
         }
 
+        public void Move (MoveDirection direction)
+        {
+            switch (direction)
+            {
+                case MoveDirection.UP:
+                    if (currentY > 0)
+                    {
+                        if(mapGrid[currentX, currentY - 1] > 0)
+                        currentY--;
+                    }
+                    break;
+                case MoveDirection.RIGHT:
+                    if (currentX < gridWidth)
+                    {
+                        if (mapGrid[currentX + 1, currentY] > 0)
+                            currentX++;
+                    }
+                    break;
+                case MoveDirection.DOWN:
+                    if (currentY < gridHeight)
+                    {
+                        if (mapGrid[currentX, currentY + 1] > 0)
+                            currentY++;
+                    }
+                    break;
+                case MoveDirection.LEFT:
+                    if (currentX > 0)
+                    {
+                        if (mapGrid[currentX - 1, currentY] > 0)
+                            currentX--;
+                    }
+                    break;
+            }
+            Console.Beep();
+        }
+
         public void Walk(object state)
         {
-            if (shouldWalk)
+            while (shouldWalk)
             {
                 bool walked = false;
                 // 0: north, 1: east, 2: south, 3: west

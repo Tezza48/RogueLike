@@ -1,0 +1,9 @@
+C:\Users\Games\Documents\GitHub\Roguelike\DrunkenWalk\DrunkenWalk\bin\Debug\DrunkenWalk.exe.config
+C:\Users\Games\Documents\GitHub\Roguelike\DrunkenWalk\DrunkenWalk\bin\Debug\DrunkenWalk.exe
+C:\Users\Games\Documents\GitHub\Roguelike\DrunkenWalk\DrunkenWalk\bin\Debug\DrunkenWalk.pdb
+C:\Users\Games\Documents\GitHub\Roguelike\DrunkenWalk\DrunkenWalk\obj\Debug\DrunkenWalk.csprojResolveAssemblyReference.cache
+C:\Users\Games\Documents\GitHub\Roguelike\DrunkenWalk\DrunkenWalk\obj\Debug\DrunkenWalk.exe
+C:\Users\Games\Documents\GitHub\Roguelike\DrunkenWalk\DrunkenWalk\obj\Debug\DrunkenWalk.pdb
+C:\Users\Games\Documents\GitHub\Forked\RogueLike\DrunkenWalk\DrunkenWalk\bin\Debug\DrunkenWalk.exe.config
+C:\Users\Games\Documents\GitHub\Forked\RogueLike\DrunkenWalk\DrunkenWalk\obj\Debug\DrunkenWalk.exe
+C:\Users\Games\Documents\GitHub\Forked\RogueLike\DrunkenWalk\DrunkenWalk\obj\Debug\DrunkenWalk.pdb

@@ -20,6 +20,28 @@ namespace DrunkenWalk
             {
                 dungeon.DrawDungeon();
                 Thread.Sleep(INTERVAL);
+
+                ConsoleKeyInfo keyPressed = Console.ReadKey();
+                if (keyPressed.Key == ConsoleKey.Escape)
+                {
+                    break;
+                }
+                if (keyPressed.Key == ConsoleKey.UpArrow)
+                {
+                    dungeon.Move(DungeonGeneration.MoveDirection.UP);
+                }
+                if (keyPressed.Key == ConsoleKey.RightArrow)
+                {
+                    dungeon.Move(DungeonGeneration.MoveDirection.RIGHT);
+                }
+                if (keyPressed.Key == ConsoleKey.DownArrow)
+                {
+                    dungeon.Move(DungeonGeneration.MoveDirection.DOWN);
+                }
+                if (keyPressed.Key == ConsoleKey.LeftArrow)
+                {
+                    dungeon.Move(DungeonGeneration.MoveDirection.LEFT);
+                }
             }
         }
     }
